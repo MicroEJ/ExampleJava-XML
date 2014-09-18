@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	ANT file
+	Copyright 2014 IS2T. All rights reserved.
+	Use of this source code is governed by a BSD-style license that can be found at http://www.is2t.com/open-source-bsd-license/.
+-->
+<project name="xml" default="xml/export">
+
+	<dirname file="${ant.file.xml}" property="xml.project"/>
+	<basename file="${xml.project}" property="xml.projectname"/>
+	<dirname file="${xml.project}" property="xml.project.container"/>
+	<property name="xml.output.dirname" value="dist"/>
+	<property name="xml.output.dir" location="${xml.project}/${xml.output.dirname}"/>
+
+	<target name="xml/export">
+		<fileset id="xml.files" dir="${xml.project.container}">
+			<include name="${xml.projectname}/**"/>
+			<exclude name="${xml.projectname}/${xml.output.dirname}/**"/>
+			<exclude name="*/bin*/**"/>
+			<exclude name="*/com.*/**"/>
+			<exclude name="*/org.*/**"/>
+			<exclude name="*/*.map"/>
+			<exclude name="*/**/.jazzignore"/>
+			<exclude name="*/launches/*.properties"/>
+			<exclude name="*/.settings/org.sonar.ide.eclipse.core.prefs"/>
+		</fileset>
+		<tstamp>
+			<format property="version" pattern="yyyyMMdd" />
+		</tstamp>
+		<zip destfile="${xml.output.dir}/${xml.projectname}-${version}.zip">
+			<fileset refid="xml.files" />
+		</zip>
+	</target>
+		
+</project>

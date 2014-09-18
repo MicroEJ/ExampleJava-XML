@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	XML file
+	Copyright 2014 IS2T. All rights reserved.
+	Use of this source code is governed by a BSD-style license that can be found at http://www.is2t.com/open-source-bsd-license/.
+-->
+<poem xmlns="http://www.megginson.com/ns/exp/poetry">
+	<title>Roses are Red</title>
+	<l>Roses are red,</l>
+	<l>Violets are blue;</l>
+	<l>Sugar is sweet,</l>
+	<l>And I love you.</l>
+</poem>
