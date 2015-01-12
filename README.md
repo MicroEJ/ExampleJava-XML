@@ -1,5 +1,5 @@
 # Overview
-This eclipse project presents how to parse XML in MicroEJ environment. It details how to use **XML Pull** parsers like **KXmlParser** and **MXParser**.
+This eclipse project presents how to parse XML in MicroEJ environment. It details how to use **XML Pull** parsers such as **KXmlParser** and **MXParser**.
 
 For more information about XML pull parsing, please refer to http://www.xmlpull.org.
 
