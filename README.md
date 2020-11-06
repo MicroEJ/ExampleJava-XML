@@ -1,34 +1,40 @@
 # Overview
-This eclipse project presents how to parse XML in MicroEJ environment. It details how to use **XML Pull** parsers such as **KXmlParser** and **MXParser**.
+
+This project example shows how to parse an XML resource. It details how to use **KXml**, an **XML Pull** parser available from MicroEJ Central Repository.
 
 For more information about XML pull parsing, please refer to http://www.xmlpull.org.
 
 
 ### Requirements
 
-- JRE 7 x86
-- MicroEJ 3.0 at least
+- MicroEJ SDK 5.x (tested on MicroEJ SDK 5.2.0)
 
 ### Project structure
 
 - `src/`
   - Java sources
   - XML resources
-- `dist/`: when `build.ant` is called, a zip containing the project is created in this folder
-- `launches/`: MicroEJ launches
-- `lib/`: XML parsers libraries (available at http://www.xmlpull.org/impls.shtml)
-- `build.ant`: ant build file meant to archive this project
+- `module.ivy` : [Module description file](https://docs.microej.com/en/latest/ApplicationDeveloperGuide/mmm.html#module-description-file)
+- `CHANGELOG.md`
 - `LICENCE.md`
-- `README.md`
+- `README.md` : This
 
 ### Configuration
-Two different parsers are available: **KXmlParser** and **MXParser**. To switch between these parsers, open the build path (Right-click on the project, _Build Path_, _Configure Build Path_, _Libraries_), choose between `kxml2-2.3.0.jar` (KXmlParser) and `xpp3_min-1.1.4c.jar` (MXParser), remove the other one.
+
+This project has **KXmlParser** already added to its dependencies. To add **KXmlParser** to your own project, add the following line to your `module.ivy` or your `ivy.xml`:
+``<dependency org="org.kxml2" name="kxml2" rev="2.3.2"/>``
+You can look at this project's `module.ivy` file to see where to add the dependency line.
 
 ## Usage
-To launch the application, right-click on the project, select _Run as_, _MicroEJ Application_ and choose _ReadPoem (Simulation)_. Another launcher is available to execute on the target board.
+To launch the application, right-click on the project, select _Run as_, _MicroEJ Application_ and choose a valid Platform in the menu. For more information on running this application on a hardware device, please refer to the "Getting started" tutorial on https://developer.microej.com/get-started/.
 
 ## Changes
 - Simple example
 
 ## License
 See the license file `LICENSE.md` located at the root of this repository.
+
+---
+_Markdown_  
+_Copyright 2014-2020 MicroEJ Corp. All rights reserved._  
+_Use of this source code is governed by a BSD-style license that can be found with this software._  
